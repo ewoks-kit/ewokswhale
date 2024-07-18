@@ -3,17 +3,14 @@ FROM python:slim-bullseye
 # https://docs.python.org/3/using/cmdline.html#cmdoption-u
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /ewoksweb_app
-RUN pip install ewoksweb 
-RUN pip install ewoksjob[redis]
-
-ARG APP_PORT=8000
-EXPOSE $APP_PORT
-ENV APP_PORT ${APP_PORT}
+WORKDIR /worker
 
 ARG REDIS_PORT
 ENV REDIS_PORT ${REDIS_PORT}
 
+RUN pip install ewoksjob[redis,worker]
+
+COPY celeryconfig.py .
 COPY entrypoint.sh .
 RUN chmod +x entrypoint.sh
 

@@ -1,11 +1,7 @@
 {
   "graph": {
     "id": "decimal_test",
-    "label": "decimal_test",
-    "uiProps": {
-      "comment": "",
-      "notes": []
-    }
+    "label": "decimal_test"
   },
   "nodes": [
     {
