@@ -1,0 +1,87 @@
+{
+  "graph": {
+    "id": "decimal_test",
+    "label": "decimal_test",
+    "uiProps": {
+      "comment": "",
+      "notes": []
+    }
+  },
+  "nodes": [
+    {
+      "id": "ewokscore.tests.examples.tasks.sumtask.SumTask1",
+      "label": "SumTask",
+      "task_type": "class",
+      "task_identifier": "ewokscore.tests.examples.tasks.sumtask.SumTask",
+      "inputs_complete": false,
+      "task_generator": "",
+      "default_inputs": [
+        {
+          "name": "b",
+          "value": 10.1
+        },
+        {
+          "name": "delay",
+          "value": 2
+        }
+      ],
+      "default_error_node": false,
+      "uiProps": {
+        "icon": "sum.png",
+        "position": {
+          "x": 465,
+          "y": 360
+        },
+        "moreHandles": false,
+        "withImage": true,
+        "withLabel": true,
+        "nodeWidth": 100
+      }
+    },
+    {
+      "id": "ewokscore.tests.examples.tasks.sumtask.SumTask0",
+      "label": "SumTask",
+      "task_type": "class",
+      "task_identifier": "ewokscore.tests.examples.tasks.sumtask.SumTask",
+      "inputs_complete": false,
+      "task_generator": "",
+      "default_inputs": [
+        {
+          "name": "a",
+          "value": 5.6
+        }
+      ],
+      "default_error_node": false,
+      "uiProps": {
+        "icon": "sum.png",
+        "position": {
+          "x": 105,
+          "y": 345
+        },
+        "moreHandles": false,
+        "withImage": true,
+        "withLabel": true,
+        "nodeWidth": 100
+      }
+    }
+  ],
+  "links": [
+    {
+      "source": "ewokscore.tests.examples.tasks.sumtask.SumTask0",
+      "target": "ewokscore.tests.examples.tasks.sumtask.SumTask1",
+      "data_mapping": [
+        {
+          "source_output": "result",
+          "target_input": "a"
+        }
+      ],
+      "on_error": false,
+      "required": false,
+      "map_all_data": false,
+      "uiProps": {
+        "type": "default",
+        "animated": true
+      }
+    }
+  ]
+}
