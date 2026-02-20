@@ -1,6 +1,5 @@
 import os
 
-
 RESOURCE_DIRECTORY = "/ewoksweb_app/resources"
 
 EWOKS = {
